@@ -171,11 +171,11 @@ Third-party support
 pytest
 +++++++
 pytest_ supports a ``--pdb`` option which can run ``ipdb`` /
-``IPython.terminal.debugger:Pdb`` on ``Exception`` and ``breakpoint()``:
+``IPython.terminal.debugger:TerminalPdb`` on ``Exception`` and ``breakpoint()``:
 
 .. code:: bash
 
-    pytest --pdb --pdbcls=IPython.terminal.debugger:Pdb -v ./test_example.py
+    pytest --pdb --pdbcls=IPython.terminal.debugger:TerminalPdb -v ./test_example.py
 
 You don't need to specify ``--pdbcls`` for every ``pytest`` invocation 
 if you add ``addopts`` to ``pytest.ini`` or ``pyproject.toml``.
@@ -185,14 +185,14 @@ if you add ``addopts`` to ``pytest.ini`` or ``pyproject.toml``.
 .. code:: bash
 
   [tool.pytest.ini_options]
-  addopts = "--pdbcls=IPython.terminal.debugger:Pdb"
+  addopts = "--pdbcls=IPython.terminal.debugger:TerminalPdb"
 
 ``pyproject.toml``:
 
 .. code:: yml
 
   [tool.pytest.ini_options]
-  addopts = "--pdbcls=IPython.terminal.debugger:Pdb"
+  addopts = "--pdbcls=IPython.terminal.debugger:TerminalPdb"
 
 
 .. _pytest: https://pypi.python.org/pypi/pytest
